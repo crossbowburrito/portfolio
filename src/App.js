@@ -4,6 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import ProjectTile from './ProjectTile';
 
+
 function App() {
   const [projects, setProjects] = useState([]);
 
