@@ -1,6 +1,7 @@
 // Footer.js
 import React from 'react';
 import './Footer.css';
+import MagnifyingGlassIcon from './assets/magnifying-glass-svgrepo-com.svg';
 
 function Footer() {
     return (
@@ -14,7 +15,9 @@ function Footer() {
                     <div className="search-container">
                     <form action="/search" method="get">
                         <input type="search" placeholder="Search..." name="search" />
-                        <button type="submit">🔍</button>
+                        <button type="submit">
+                            <img src={MagnifyingGlassIcon} alt="Search" />
+                        </button>
                     </form>
                     </div>
                 </ul>

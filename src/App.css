@@ -11,10 +11,16 @@
 
 .element {
   background-image: url('./assets/background.png');
-  height: 1000px; /* Example height */
+  height: 1200px; /* Example height */
   width: 100%; /* Example width */
   background-size: cover; /* Cover the entire element area */
   background-position: center; /* Center the background image */
   color: white;
 }
 
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Add more styling as needed */
+}

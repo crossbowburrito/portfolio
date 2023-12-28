@@ -1,0 +1,83 @@
+/* ProjectTile.css */
+.project-tile {
+    position: relative; /* Add this to ensure the absolute position of children is relative to the tile */
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #e9e7e7;
+    overflow: hidden; /* Add this to prevent content from spilling out */
+    border-radius: 15px; /* Rounded corners for the tile */
+    padding: 20px;
+    margin: 16px; /* This creates space between the tiles */
+    width: 300px; /* Adjust width as needed for a better layout */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+    background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Subtle gradient background */
+    color: #333; /* Color for the text */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes space inside the tile */
+    align-items: flex-start; /* Aligns items to the start of the tile */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  }
+
+  .project-tile-buttons {
+    display: flex;
+    justify-content: center; /* This will center the buttons */
+    gap: 10px; /* This creates space between the two buttons */
+    margin-top: 20px; /* Adds space above the buttons */
+  }
+  
+  .btn {
+    text-decoration: none;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #106ba3; /* Example button color */
+    color: white;  
+    padding: 10px 15px; /* Adjust padding as needed */
+    flex: 1; /* This will make the buttons take up equal space within the container */
+    text-align: center; /* Ensure text is centered */
+    cursor: pointer;
+    margin: 4px; /* Adds a little space around buttons */
+  }
+  
+  /* Optional: Slightly enlarge tile on hover for an interactive effect */
+  .project-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Add more specific styles for elements within the project tile as needed */
+  .project-tile h3 {  
+    margin-top: 0; /* Removes top margin for the title */
+    color: #222; /* Darker text color for the title */
+  }
+  
+  .project-tile p {
+    color: #555; /* Lighter text color for the description */
+    flex-grow: 1; /* Allows the description to fill the space */
+  }
+  
+  .project-tile a {
+    position: absolute;
+    bottom: 16px; /* Adjust this as needed to move the link up from the bottom */
+    left: 0;
+    right: 0;
+    margin: auto; /* This will center the link */
+    width: fit-content; /* Shrink the width to fit the content */
+    background-color: #106ba3; /* Background color for the link */
+    color: white; /* Text color for the link */
+    text-decoration: none; /* Removes underline */
+    padding: 10px 15px; /* Padding inside the link */
+    border-radius: 8px; /* Rounded corners for the link */
+    align-self: center; /* Centers the link inside the tile */
+    margin-top: 20px; /* Space between the description and the link */
+  }
+  
+  /* Style for images inside the project tile */
+  .project-tile img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px; /* Space between the image and the title */
+    border-radius: 8px; /* Rounded corners for the image */
+  }
+  

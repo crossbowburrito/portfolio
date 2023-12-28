@@ -37,14 +37,41 @@
     background-color: #999;
   }
   
-  /* Update these styles in both Header.css and Footer.css */
 
-.search-container input[type="search"] {
-  /* ... existing styles ... */
-  border-radius: 50px; /* Adjust as needed for the desired roundness */
-}
-
-.search-container button {
-  /* ... existing styles ... */
-  border-radius: 20px; /* Match the input field's border-radius */
-}
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content; /* To prevent the search bar from stretching */
+  
+  }
+  
+  .search-container input[type="search"] {
+    padding: 0 12px 0 35px; /* Left padding to accommodate the button */
+    height: 40px; /* Fixed height for the input */
+    border-radius: 20px; /* Fully rounded corners for the input */
+    border: 1px solid #ccc; /* Optional border for the input */
+    outline: none;
+    width: 200px; /* Or however wide you want your search bar to be */
+    position: relative; /* Stack the layers */
+  }
+  
+  .search-container button {
+    position: absolute;
+    left: 10px; /* Adjust this to fit the exact position */
+    top: 16px; /* Adjust if necessary */
+    height: 30px; /* Adjust this so it fits well */
+    border-radius: 50%; /* Fully rounded button */
+    padding: 0; /* Padding removed, adjust if you have content inside the button */
+    background-color: white;
+    border: none; /* Optional border for the button */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-container button img {
+    height: 20px; /* Adjust the size as needed */
+    width: 20px; /* Adjust the size as needed */
+  }
