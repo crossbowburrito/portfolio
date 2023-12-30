@@ -1,54 +1,29 @@
-import React, { useState, useEffect } from 'react'; // Import React, useState, and useEffect here
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
-import ProjectTile from './ProjectTile';
-
+import HomePage from './HomePage';
+import Projects from './Projects';
+import AboutMe from './AboutMe';
+import Contact from './Contact';
 
 function App() {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const response = await fetch('https://api.github.com/users/crossbowburrito/repos');
-      const result = await response.json();
-  
-      // Check if the result is an array and sort by the most recently updated
-      if (Array.isArray(result)) {
-        const sortedProjects = result
-          .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
-          .slice(0, 4) // Take only the first 4 projects
-          .map(repo => ({
-            name: repo.name,
-            description: repo.description,
-            image: 'path_to_some_image', // You can add images to your repo or use a placeholder
-            repoUrl: repo.html_url,
-          }));
-        
-        setProjects(sortedProjects);
-      } else {
-        // Handle any potential errors or messages from GitHub API
-        console.error('GitHub API response is not an array:', result);
-      }
-    };
-  
-    fetchProjects();
-  }, []);
-
   return (
-    <div className="App">
-      <div className='element'>
-      <Header />
-      <h1>Welcome to My Portfolio</h1>
-      <p>This is a React-based portfolio site.</p>
-      <div className="projects-container">
-        {projects.map(project => (
-          <ProjectTile key={project.name} project={project} />
-        ))}
+    <Router>
+      <div className="App">
+      <div className="shared-background">
+        <Header />
+        <Routes> {/* Use 'Routes' instead of 'Switch' */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/aboutme" element={<AboutMe />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
       </div>
-      <Footer />
       </div>
-    </div>
+    </Router>
   );
 }
 

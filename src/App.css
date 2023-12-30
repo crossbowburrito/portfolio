@@ -10,12 +10,15 @@
 }
 
 .element {
-  background-image: url('./assets/background.png');
   height: 1200px; /* Example height */
   width: 100%; /* Example width */
   background-size: cover; /* Cover the entire element area */
   background-position: center; /* Center the background image */
   color: white;
+}
+
+.shared-background {
+  background-image: url('./assets/background.png');
 }
 
 .projects-container {

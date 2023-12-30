@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Distributes space inside the tile */
-    align-items: flex-start; /* Aligns items to the start of the tile */
+    align-items: center; /* Aligns items to the start of the tile */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
   }
 
